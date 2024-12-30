@@ -1,0 +1,11 @@
+{
+	"required": true,
+	"package": "com.github.megabyte6.thomas.mixin",
+	"compatibilityLevel": "JAVA_21",
+	"mixins": [
+		"ExampleMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}
