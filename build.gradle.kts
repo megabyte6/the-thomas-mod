@@ -18,18 +18,6 @@ repositories {
     // for more information about repositories.
 }
 
-loom {
-    splitEnvironmentSourceSets()
-
-    mods {
-        create("thethomasmod") {
-            sourceSet(sourceSets["main"])
-            sourceSet(sourceSets["client"])
-        }
-    }
-
-}
-
 fabricApi {
     configureDataGeneration {
         client = true
