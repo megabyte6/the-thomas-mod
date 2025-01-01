@@ -22,7 +22,7 @@ loom {
     splitEnvironmentSourceSets()
 
     mods {
-        create("thomas") {
+        create("thethomasmod") {
             sourceSet(sourceSets["main"])
             sourceSet(sourceSets["client"])
         }

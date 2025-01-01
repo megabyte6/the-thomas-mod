@@ -1,15 +1,15 @@
 {
 	"schemaVersion": 1,
-	"id": "thomas",
+	"id": "the-thomas-mod",
 	"version": "${version}",
-	"name": "Thomas",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"name": "The Thomas Mod",
+	"description": "A mod that adds Thomas the Tank Engine to Minecraft Java Edition",
 	"authors": [
 		"megabyte6"
 	],
 	"contact": {
-		"homepage": "https://modrinth/mod/thomas",
-		"sources": "https://github.com/megabyte6/thomas"
+		"homepage": "https://modrinth/mod/the-thomas-mod",
+		"sources": "https://github.com/megabyte6/TheThomasMod"
 	},
 	"license": "GPL-3.0-or-later",
 	"icon": "assets/thomas/icon.png",
