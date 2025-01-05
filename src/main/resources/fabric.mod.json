@@ -1,6 +1,6 @@
 {
 	"schemaVersion": 1,
-	"id": "the-thomas-mod",
+	"id": "thomas",
 	"version": "${version}",
 	"name": "The Thomas Mod",
 	"description": "A mod that adds Thomas the Tank Engine to Minecraft Java Edition",
