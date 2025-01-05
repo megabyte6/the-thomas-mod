@@ -32,8 +32,4 @@ public class ThomasTheTankEngineEntityModel extends EntityModel<LivingEntityRend
                 ModelTransform.of(0.0F, -10.0F, 0.0F, -1.5708F, 0.0F, 3.1416F));
         return TexturedModelData.of(modelData, 64, 64);
     }
-
-//    public void render(MatrixStack matrices, VertexConsumer vertexConsumer, int light, int overlay, int color) {
-//        bb_main.render(matrices, vertexConsumer, light, overlay, color);
-//    }
 }
