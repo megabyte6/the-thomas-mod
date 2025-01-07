@@ -64,7 +64,7 @@ java {
 modrinth {
     // Remember to have the MODRINTH_TOKEN environment variable set or else this will fail - just make sure it stays private!
     token.set(System.getenv("MODRINTH_TOKEN"))
-    projectId.set("ueOBZDS1")
+    projectId.set("dyHolLwa")
     versionType.set(providers.gradleProperty("modrinth_version_type"))
     uploadFile.set(tasks.jar)
     gameVersions.addAll(providers.gradleProperty("modrinth_release_game_versions").get().split(",").map(String::trim))
