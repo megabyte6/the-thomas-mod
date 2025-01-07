@@ -1,6 +1,6 @@
 package com.github.megabyte6.thomas;
 
-import com.github.megabyte6.thomas.entity.ModEntities;
+import com.github.megabyte6.thomas.entity.ModEntityType;
 import net.fabricmc.api.ModInitializer;
 
 import net.minecraft.util.Identifier;
@@ -21,7 +21,7 @@ public class Thomas implements ModInitializer {
 		// However, some things (like resources) may still be uninitialized.
 		// Proceed with mild caution.
 
-		ModEntities.initialize();
+		ModEntityType.initialize();
 	}
 
 	public static Identifier idOf(String path) {

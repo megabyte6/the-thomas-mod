@@ -1,6 +1,6 @@
 package com.github.megabyte6.thomas;
 
-import com.github.megabyte6.thomas.entity.ModEntities;
+import com.github.megabyte6.thomas.entity.ModEntityType;
 import com.github.megabyte6.thomas.entity.ThomasTheTankEngineEntityRenderer;
 import com.github.megabyte6.thomas.entity.model.ThomasTheTankEngineEntityModel;
 import net.fabricmc.api.ClientModInitializer;
@@ -13,6 +13,6 @@ public class ThomasClient implements ClientModInitializer {
 		// This entrypoint is suitable for setting up client-specific logic, such as rendering.
 
 		EntityModelLayerRegistry.registerModelLayer(ThomasTheTankEngineEntityModel.MAIN_LAYER, ThomasTheTankEngineEntityModel::getTexturedModelData);
-		EntityRendererRegistry.register(ModEntities.THOMAS_THE_TANK_ENGINE, ThomasTheTankEngineEntityRenderer::new);
+		EntityRendererRegistry.register(ModEntityType.THOMAS_THE_TANK_ENGINE, ThomasTheTankEngineEntityRenderer::new);
 	}
 }

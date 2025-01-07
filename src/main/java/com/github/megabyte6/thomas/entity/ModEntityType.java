@@ -12,7 +12,7 @@ import net.minecraft.registry.RegistryKeys;
 
 import static com.github.megabyte6.thomas.Thomas.idOf;
 
-public class ModEntities {
+public class ModEntityType {
     public static final EntityType<ThomasTheTankEngineEntity> THOMAS_THE_TANK_ENGINE = register(
             "thomas_the_tank_engine",
             EntityType.Builder.create(ThomasTheTankEngineEntity::new, SpawnGroup.MONSTER).dimensions(1, 0.75f));
