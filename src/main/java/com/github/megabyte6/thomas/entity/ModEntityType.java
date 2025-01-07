@@ -17,7 +17,7 @@ public class ModEntityType {
             "thomas_the_tank_engine",
             EntityType.Builder.create(ThomasTheTankEngineEntity::new, SpawnGroup.MONSTER).dimensions(1, 0.75f));
 
-    public static void initialize() {
+    public static void registerEntityAttributes() {
         Thomas.LOGGER.debug("Registering custom entities");
 
         FabricDefaultAttributeRegistry.register(THOMAS_THE_TANK_ENGINE,

@@ -25,7 +25,7 @@ public class Thomas implements ModInitializer {
 
         ModItemGroups.registerItemGroups();
         ModItems.registerItems();
-        ModEntityType.initialize();
+        ModEntityType.registerEntityAttributes();
 	}
 
     public static Identifier idOf(String path) {
