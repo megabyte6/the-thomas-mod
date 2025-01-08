@@ -17,7 +17,7 @@ The Thomas Mod is a Minecraft mod that adds items and features relating to Thoma
 ## Installation
 
 1. Download and install [Fabric Loader](https://fabricmc.net/use/).
-2. Download the latest release of the Thomas Mod from [Modrinth](https://modrinth.com/project/the-thomas-mod) or the [Releases page](https://github.com/megabyte6/TheThomasMod/releases/latest).
+2. Download the latest release of the Thomas Mod from [Modrinth](https://modrinth.com/project/the-thomas-mod) or the [Releases page](https://github.com/megabyte6/the-thomas-mod/releases/latest).
 3. Place the downloaded `.jar` file into the `mods` folder of your Minecraft directory.
 4. Launch Minecraft with the Fabric profile.
 
@@ -32,8 +32,8 @@ The Thomas Mod is a Minecraft mod that adds items and features relating to Thoma
 
 1. Clone the repository:
     ```sh
-    git clone https://github.com/megabyte6/TheThomasMod.git
-    cd TheThomasMod
+    git clone https://github.com/megabyte6/the-thomas-mod.git
+    cd the-thomas-mod
     ```
 2. Build the project using Gradle:
     ```sh
