@@ -1,3 +1,5 @@
+import net.fabricmc.loom.task.RemapJarTask
+
 plugins {
     id("fabric-loom") version "1.9-SNAPSHOT"
     id("com.modrinth.minotaur") version "2.+"
@@ -5,10 +7,6 @@ plugins {
 
 project.version = providers.gradleProperty("mod_version").get()
 project.group = providers.gradleProperty("maven_group").get()
-
-base {
-    archivesName = providers.gradleProperty("archives_base_name")
-}
 
 repositories {
     // Add repositories to retrieve artifacts from in here.
@@ -20,24 +18,6 @@ repositories {
     maven {
         name = "Terraformers"
         url = uri("https://maven.terraformersmc.com/")
-    }
-}
-
-loom {
-    splitEnvironmentSourceSets()
-
-    mods {
-        create("thethomasmod") {
-            sourceSet(sourceSets["main"])
-            sourceSet(sourceSets["client"])
-        }
-    }
-
-}
-
-fabricApi {
-    configureDataGeneration {
-        client = true
     }
 }
 
@@ -61,6 +41,23 @@ java {
     targetCompatibility = JavaVersion.VERSION_21
 }
 
+loom {
+    splitEnvironmentSourceSets()
+
+    mods {
+        create("thethomasmod") {
+            sourceSet(sourceSets["main"])
+            sourceSet(sourceSets["client"])
+        }
+    }
+}
+
+fabricApi {
+    configureDataGeneration {
+        client = true
+    }
+}
+
 modrinth {
     // Remember to have the MODRINTH_TOKEN environment variable set or else this will fail - just make sure it stays private!
     token.set(System.getenv("MODRINTH_TOKEN"))
@@ -82,14 +79,18 @@ tasks {
         }
     }
 
-    jar {
+    withType<JavaCompile>().configureEach {
+        options.release = providers.gradleProperty("jdk_target").map { it.toInt() }
+    }
+
+    named<Jar>("jar") {
         from("LICENSE") {
-            rename { "${it}_${project.base.archivesName.get()}" }
+            rename { "${it}_${project.name}" }
         }
     }
 
-    withType<JavaCompile>().configureEach {
-        options.release = providers.gradleProperty("jdk_target").map { it.toInt() }
+    named<RemapJarTask>("remapJar") {
+        archiveVersion.set("${project.version}+mc${providers.gradleProperty("minecraft_version").get()}")
     }
 
     modrinth.get().dependsOn(modrinthSyncBody)
