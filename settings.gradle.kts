@@ -1,3 +1,5 @@
+rootProject.name = providers.gradleProperty("archives_base_name").get()
+
 pluginManagement {
 	repositories {
 		maven {
