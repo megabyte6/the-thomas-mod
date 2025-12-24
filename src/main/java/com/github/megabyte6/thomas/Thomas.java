@@ -4,8 +4,7 @@ import com.github.megabyte6.thomas.entity.ModEntityType;
 import com.github.megabyte6.thomas.item.ModItemGroups;
 import com.github.megabyte6.thomas.item.ModItems;
 import net.fabricmc.api.ModInitializer;
-
-import net.minecraft.util.Identifier;
+import net.minecraft.resources.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -18,7 +17,7 @@ public class Thomas implements ModInitializer {
     public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
     public static Identifier idOf(String path) {
-        return Identifier.of(MOD_ID, path);
+        return Identifier.fromNamespaceAndPath(MOD_ID, path);
     }
 
     @Override
